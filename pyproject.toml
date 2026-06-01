@@ -1,0 +1,18 @@
+[project]
+name = "spotter"
+version = "0.1.0"
+description = "A safety gate for agents training in Fleet's gyms. Scores whether an agent finished safely, not just whether it finished."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Lawrence Wolters" }]
+keywords = ["fleet", "agents", "evaluation", "verifier", "safety", "rl-environments"]
+dependencies = []
+
+[project.optional-dependencies]
+# Live Fleet integration (examples/fleet_integration.py). The gate itself needs nothing.
+fleet = ["fleet-python"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
